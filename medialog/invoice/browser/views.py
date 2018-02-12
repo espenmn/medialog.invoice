@@ -3,6 +3,8 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
+from medialog.invoice.interfaces import IInvoiceSettings
+
 
 class InvoiceView(BrowserView):
     """ PDF view for invoice.    """

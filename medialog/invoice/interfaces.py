@@ -37,7 +37,7 @@ class IInvoiceSettings(form.Schema):
         ],
      )
 
-    paid_to = schema.TextLine (
+    paid_to = schema.Text (
     	title=_(u"Paid to", default=u"Paid to"),
     )
 
@@ -51,5 +51,5 @@ class IInvoiceSettings(form.Schema):
     kontonr = schema.Text (
     	title=_(u"Account nr.", default=u"Kontonr."),
     )
-    
+
 alsoProvides(IInvoiceSettings, IMedialogControlpanelSettingsProvider)

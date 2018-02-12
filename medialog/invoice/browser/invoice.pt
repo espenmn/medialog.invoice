@@ -16,7 +16,7 @@
       </div>
 
       <div id="bodytext">
-         <p tal:replace="structure view/bodytext|None" />
+         <p tal:replace="structure view/bodytext" />
       </div>
 
       <div id="sum">
