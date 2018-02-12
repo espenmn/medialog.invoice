@@ -17,6 +17,22 @@ class InvoiceView(BrowserView):
         return self.template(self.context)
 
     @property
+    def sum(self):
+        return  api.portal.get_registry_record('sum', interface=IInvoiceSettings)
+
+    @property
+    def kontonr(self):
+        return  api.portal.get_registry_record('kontonr', interface=IInvoiceSettings)
+
+    @property
+    def paid_to(self):
+        return  api.portal.get_registry_record('paid_to', interface=IInvoiceSettings)
+
+    @property
+    def bodytext(self):
+        return  api.portal.get_registry_record('bodytext', interface=IInvoiceSettings)
+
+    @property
     def group_users(self):
         usergroup = api.user.get_users()
         userlist = []

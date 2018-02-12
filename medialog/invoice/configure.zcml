@@ -3,7 +3,16 @@
         xmlns:browser="http://namespaces.zope.org/browser"
         xmlns:plone="http://namespaces.plone.org/plone"
         xmlns:pp="http://namespaces.zopyx.com/pp"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
         i18n_domain="medialog.invoice">
+
+        <genericsetup:registerProfile
+            name="default"
+            title="medialog.invoice"
+            directory="profiles/default"
+            description="Installs the medialog.invoice add-on."
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+            />
 
         <include package=".browser" />
 
