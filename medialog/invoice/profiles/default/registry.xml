@@ -1,0 +1,8 @@
+<registry>
+<records interface="medialog.invoice.interfaces.IInvoiceSettings">
+  <value key="paid_to"></value>
+  <value key="sum"></value>
+  <value key="bodytext"></value>
+  <value key="kontonr"></value>
+</records>
+</registry>

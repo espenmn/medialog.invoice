@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="medialog.invoice"
+      interface="medialog.invoice.interfaces.IMedialogInvoiceLayer"
+      />
+</layers>

@@ -27,6 +27,7 @@ version=version,
       install_requires=[
           'setuptools',
           'pp.client-plone',
+          'medialog.controlpanel'
           # -*- Extra requirements: -*-
       ],
       tests_require=['zope.testing'],
