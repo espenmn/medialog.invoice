@@ -1,0 +1,69 @@
+@import url("fonts.css");
+
+body {
+    font-size: 11px;
+    font-family: "Ubuntu";
+}
+
+ 
+
+.logoimage {
+    position: absolute;
+    top: 907px;
+    right: 10px;
+    height: 56px;
+    width: 100px;
+}
+
+.  
+
+/* styles for invoice */
+.ivoice p {
+	margin: 0;
+	padding: 0;
+	font-family: Baskerville, Georgia, Garamond, Times, serif;
+    font-size: 9pt !important;
+}
+
+div#paid_from {
+	position:  absolute;
+	top: 23px;
+	left: 380px;
+	font-size: 80%;
+
+}
+
+  
+
+div#paid_to {
+	position:  absolute;
+	top: 808px;
+	left: 390px;
+}
+
+ 
+
+div#total {
+	position:  absolute;
+	top: 935px;
+	left: 290px;
+}
+
+div#kontonr {
+	position:  absolute;
+	top: 935px;
+	left: 454px;
+}
+
+
+div#bodytext {
+	position:  absolute;
+	top: 292px;
+	left: 60px;
+	font-size: 80%;
+    min-width: 500px;
+    border-top: 1px solid #DDD;
+	padding-top: 10px;
+}
+
+ 
