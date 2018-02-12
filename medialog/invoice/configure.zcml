@@ -2,8 +2,13 @@
         xmlns="http://namespaces.zope.org/zope"
         xmlns:browser="http://namespaces.zope.org/browser"
         xmlns:plone="http://namespaces.plone.org/plone"
+        xmlns:pp="http://namespaces.zopyx.com/pp"
         i18n_domain="medialog.invoice">
 
         <include package=".browser" />
 
+        <pp:resourceDirectory
+                name="resources_invoice"
+                directory="resources_invoice"
+         />
 </configure>
