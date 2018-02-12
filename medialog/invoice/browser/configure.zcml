@@ -1,0 +1,16 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:browser="http://namespaces.zope.org/browser"
+        xmlns:plone="http://namespaces.plone.org/plone"
+        xmlns:pp="http://namespaces.zopyx.com/pp"
+        i18n_domain="medialog.invoice">
+
+        <!--pp client templates -->
+        <browser:page
+          name="asHTML"
+          for="*"
+          permission="zope2.View"
+          class=".views.InvoiceView"
+          />
+
+</configure>

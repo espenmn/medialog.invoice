@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      i18n:domain="plone">
+
+<body>
+
+
+<div tal:repeat="medlem view/group_users">
+  <div id="medlemmer">
+    <p>${medlem/fornavn}</p>
+    <p>${medlem/etternavn}</p>
+    <p>${medlem/adresse}</p>
+    <p>${medlem/postnr}</p>
+    <p>${medlem/poststed}</p>
+  </div>
+
+ <div>
+   <p>bodytext</p>
+ </div>
+
+  <div id="sum">
+    <p sum>1000,–</p>
+  </div>
+
+  <div id="paid_by">
+    <p>${medlem/fornavn}</p>
+    <p>${medlem/etternavn}</p>
+    <p>${medlem/adresse}</p>
+    <p>${medlem/postnr}</p>
+    <p>${medlem/poststed}</p>
+  </div>
+
+  <div id="paid_to">
+    <p>DgH</p>
+  </div>
+  <div>
+    <p sum>1000,–</p>
+    </div>
+</body>
+</html>
