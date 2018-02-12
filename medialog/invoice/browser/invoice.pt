@@ -4,40 +4,40 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       i18n:domain="plone">
+  <body>
+    <div tal:repeat="medlem view/group_users">
 
-<body>
+      <div id="medlemmer">
+        <p tal:content="medlem/fornavn|None" />
+        <p tal:content="medlem/etternavn|None" />
+        <p tal:content="medlem/adresse|None" />
+        <p tal:content="medlem/postnr|None" />
+        <p tal:content="medlem/poststed|None" />
+      </div>
 
+      <div id="bodytext">
+         <p tal:replace="structure view/bodytext|None" />
+      </div>
 
-<div tal:repeat="medlem view/group_users">
-  <div id="medlemmer">
-    <p>${medlem/fornavn}</p>
-    <p>${medlem/etternavn}</p>
-    <p>${medlem/adresse}</p>
-    <p>${medlem/postnr}</p>
-    <p>${medlem/poststed}</p>
-  </div>
+      <div id="sum">
+        <p tal:content="view/sum|None">
+      </div>
 
- <div>
-   <p>bodytext</p>
- </div>
+      <div id="paid_by">
+        <p tal:content="medlem/fornavn|None" />
+        <p tal:content="medlem/etternavn|None" />
+        <p tal:content="medlem/adresse|None" />
+        <p tal:content="medlem/postnr|None" />
+        <p tal:content="medlem/poststed|None" />
+      </div>
 
-  <div id="sum">
-    <p sum>1000,–</p>
-  </div>
+      <div id="paid_to">
+        <div tal:replace="structure view/paid_to|None" />
+      </div>
 
-  <div id="paid_by">
-    <p>${medlem/fornavn}</p>
-    <p>${medlem/etternavn}</p>
-    <p>${medlem/adresse}</p>
-    <p>${medlem/postnr}</p>
-    <p>${medlem/poststed}</p>
-  </div>
-
-  <div id="paid_to">
-    <p>DgH</p>
-  </div>
-  <div>
-    <p sum>1000,–</p>
-    </div>
-</body>
+      <div id="total">
+        <p tal:content="view/sum|None">
+      </div>
+    <div>
+  </body>
 </html>
