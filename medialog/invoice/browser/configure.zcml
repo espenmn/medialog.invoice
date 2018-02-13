@@ -8,7 +8,7 @@
         <!--pp client templates -->
         <browser:page
           name="asHTML"
-          for="*"
+          for="medialog.invoice.interfaces.IMedialogInvoiceLayer"
           permission="zope2.View"
           class=".views.InvoiceView"
           />
