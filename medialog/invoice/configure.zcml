@@ -20,4 +20,11 @@
                 name="resources_invoice"
                 directory="resources_invoice"
          />
+
+         <include package="pp.client.plone" />
+
+        <class class="medialog.invoice.interfaces.IInvoice">
+               <implements interface="pp.client.plone.interfaces.IPPContent" />
+        </class>
+
 </configure>
