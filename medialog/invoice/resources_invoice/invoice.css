@@ -1,69 +1,138 @@
-@import url("fonts.css");
-
+ 
 body {
-    font-size: 11px;
+    font-size: 10pt;
     font-family: "Ubuntu";
+} 
+
+ 
+ 
+
+@page {
+  size: A4;
+  orphans:4; 
+  margin: 0cm;
+  mso-header-margin:0; 
+   mso-footer-margin:0; 
+       -webkit-margin-before: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    -webkit-padding-start: 0;
+     box-sizing: content-box;
+     page-break-before:always;
+      font-size: 10pt;
 }
 
  
+ 
 
-.logoimage {
-    position: absolute;
-    top: 907px;
-    right: 10px;
-    height: 56px;
-    width: 100px;
-}
+.page-break
+    {
+	page-break-before:always;
+ 
+    } 
 
-.  
-
-/* styles for invoice */
-.ivoice p {
-	margin: 0;
-	padding: 0;
-	font-family: Baskerville, Georgia, Garamond, Times, serif;
-    font-size: 9pt !important;
-}
-
-div#paid_from {
-	position:  absolute;
-	top: 23px;
-	left: 380px;
-	font-size: 80%;
-
-}
-
+.page-break-after   {
+    page-break-after:always;
+    } 
   
 
-div#paid_to {
-	position:  absolute;
-	top: 808px;
-	left: 390px;
-}
-
  
 
-div#total {
-	position:  absolute;
-	top: 935px;
-	left: 290px;
+/* styles for invoice */
+
+.logoimage {
+	height:  20mm;
+	width:  auto;
+	position: relative;
 }
-
-div#kontonr {
-	position:  absolute;
-	top: 935px;
-	left: 454px;
+div.medlemmer {
+	position:  relative;
+	top:  5mm;
+	height:  33mm;
+	width: 100%;
+	border:  1px solid pink;
+	line-height: 1.4em;
 }
+div.medlemmer p,
+div.paid_to  p {
+	padding: 0;
+	margin: 0;
+	line-height: 1.4em;
+} 
 
 
-div#bodytext {
-	position:  absolute;
-	top: 292px;
-	left: 60px;
-	font-size: 80%;
-    min-width: 500px;
-    border-top: 1px solid #DDD;
+div.bodytext {
+	position:  relative;
+	top:  10mm;
+	border-top: 1px solid .DDD;
+	height:  84mm;
+	width: 100%;
 	padding-top: 10px;
+	border:  1px solid green;
 }
 
+
+.innb_nr {
+	position: relative;
+	top:  20mm;
+	left:  0;
+	border:  1px solid pink;
+	width:  70mm;
+	height:  10mm;
+	color: .932092;
+}
+
+div.total {
+	position: relative;
+	left:  80mm;
+	top:  10mm;
+	color:  red;
+	border:  1px solid red;
+	width:  20mm; 
+}
+
+div.paid {
+	position: relative;
+	top:  47mm;
+	left:  0;
+	width:  100%;
+	height: 25mm;
+}
+
+div.paid_from {
+	border:  1px solid black;
+	float:  left;
+	padding-left: 5mm;
+	width:  95mm;
+}
+
+
+div.paid_to {
+	float:  left;
+	;border: 1px solid purple;
+	width:  70mm;
+}
+
+
+.sum_konto {
+    position: relative;
+    left:  70mm;;
+	top: 58mm;
+	border:  1px solid silver;
+	height:  5mm;
+	width:  72mm;
+}
+.sum {
+	float:  left;
+	display:  block;
+	}
+	
+.kontonr {
+	float: right;
+	display: block;
+}
  
