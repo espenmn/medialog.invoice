@@ -9,11 +9,16 @@ from z3c.form import interfaces
 from zope.interface import alsoProvides
 from plone.directives import form
 from medialog.controlpanel.interfaces import IMedialogControlpanelSettingsProvider
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from zope.i18nmessageid import MessageFactory
 
 _ = MessageFactory('medialog.invoice')
 
+class IMedialogInvoiceLayer(IDefaultBrowserLayer):
+    """Marker interface that defines a browser layer.
+    Just here for backward compability"""
+    pass
 
 class IInvoice(Interface):
     """Marker interface for pdf view."""
