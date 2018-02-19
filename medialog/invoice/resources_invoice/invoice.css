@@ -1,7 +1,7 @@
  
 body {
     font-size: 10pt;
-    font-family: "Ubuntu";
+    font-family: Georgia, "Times New Roman", Times, serif;
 } 
 
  
@@ -44,11 +44,33 @@ body {
 
 /* styles for invoice */
 
-.logoimage {
+.logo {
+	height:  20mm;
+	position: relative;
+	left:  0;
+	border:  1px solid green;;
+	padding: 0;
+}
+
+img.logoimage,
+logo img {
 	height:  20mm;
 	width:  auto;
+	border:  1px solid red;
 	position: relative;
+	left: -10mm;
+	top: -4mm;
 }
+
+.logo h1 {
+	position: relative;
+	left: 25mm;
+	top: -27mm;
+	font: 2em "Times New Roman", Times, serif;
+}
+
+
+
 div.medlemmer {
 	position:  relative;
 	top:  5mm;
@@ -73,26 +95,28 @@ div.bodytext {
 	width: 100%;
 	padding-top: 10px;
 	border:  1px solid green;
+	font-size: 90%;
 }
 
 
-.innb_nr {
+.kvittering {
 	position: relative;
-	top:  20mm;
+	top:  22mm;
 	left:  0;
 	border:  1px solid pink;
-	width:  70mm;
+	width:  100mm;
 	height:  10mm;
-	color: .932092;
 }
 
-div.total {
-	position: relative;
-	left:  80mm;
-	top:  10mm;
+.innb_nr {
+	border:  1px solid pink;
+	width:  65mm;
+	
+}
+
+.total {
 	color:  red;
 	border:  1px solid red;
-	width:  20mm; 
 }
 
 div.paid {
@@ -121,7 +145,7 @@ div.paid_to {
 .sum_konto {
     position: relative;
     left:  70mm;;
-	top: 58mm;
+	top: 60mm;
 	border:  1px solid silver;
 	height:  5mm;
 	width:  72mm;
