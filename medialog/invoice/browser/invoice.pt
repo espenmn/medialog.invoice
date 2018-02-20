@@ -5,9 +5,9 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       i18n:domain="plone">
-  <body tal:define="bodytext view/bodytext; sum view/sum; paid_to view/paid_to; kontonr view/kontonr">
+  <body tal:define="bodytext view/bodytext; paid_to view/paid_to; kontonr view/kontonr">
     <tal:repeat tal:repeat="medlem view/get_users">
-    <div class="page-break" >
+    <div class="page-break">
 
       <div class="logo"><img src="http://dgh.medialog.no/om-dgh/medlemsliste/++theme++dghtheme/logo.png" class="logoimage">
         <h1>Selskabet Den gode Hensigt</h1>
@@ -24,13 +24,16 @@
       </div>
 
       <div class="kvittering">
-        <span class="innb_nr">${kontonr}</span><span class="total">${sum}</span>
+        <span class="innb_nr">${kontonr}</span><span class="total">${medlem/sum}</span>
       </div>
 
       <div class="paid">
         <div class="paid_from">
         <p><br/> ${medlem/fornavn|None} ${medlem/etternavn|None}<br/>
         ${medlem/adresse|None}<br/>${medlem/postnr|None} ${medlem/poststed|None}</p>
+      </div>
+      <div class="betalingsfrist">
+         ${view/betalingsfrist}
       </div>
 
       <div class="paid_to">
@@ -39,7 +42,7 @@
     </div>
 
       <div class="sum_konto">
-         <span class="sum">${sum}</span>
+         <span class="sum">${medlem/sum}</span>
          <span class="kontonr">${kontonr}</span>
       </div>
     </div>

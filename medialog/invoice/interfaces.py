@@ -45,8 +45,13 @@ class IInvoiceSettings(form.Schema):
     	title=_(u"Paid to", default=u"Paid to"),
     )
 
-    sum = schema.TextLine (
+    sum = schema.Int(
     	title=_(u"Sum", default=u"Sum"),
+    )
+
+    betalingsfrist = schema.Text (
+    	title=_(u"due_date", default=u"Betalingsfrist."),
+        default="14 dager",
     )
     bodytext = schema.Text (
     	title=_(u"Bodytext", default=u"Bodytext"),

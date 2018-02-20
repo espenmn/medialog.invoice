@@ -40,6 +40,9 @@ class InvoiceView(BrowserView):
         userlist = []
 
         for member in usergroup:
+            summ = self.sum()
+            if member.getProperty('utenbys'):
+                summ = summ/2
             userlist.append(
                 { 'id': member.getProperty('id'),
                   'etternavn': member.getProperty('etternavn'),
@@ -49,6 +52,7 @@ class InvoiceView(BrowserView):
                   'honnor': member.getProperty('honn_rmedlem'),
                   'adresse': member.getProperty('adresse'),
                   'utenbys': member.getProperty('utenbys'),
+                  'sum': summ,
                   })
 
         return userlist
