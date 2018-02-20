@@ -51,7 +51,7 @@ class IInvoiceSettings(form.Schema):
 
     betalingsfrist = schema.Text (
     	title=_(u"due_date", default=u"Betalingsfrist."),
-        default="14 dager",
+        default=u"14 dager",
     )
     bodytext = schema.Text (
     	title=_(u"Bodytext", default=u"Bodytext"),

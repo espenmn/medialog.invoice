@@ -4,5 +4,6 @@
   <value key="sum"></value>
   <value key="bodytext"></value>
   <value key="kontonr"></value>
+  <value key="betalingsfrist"></value>
 </records>
 </registry>
