@@ -26,17 +26,18 @@
       <div class="kvittering">
         <span class="innb_nr">${kontonr}</span><span class="total">${medlem/sum}</span>
       </div>
-
-      <div class="paid">
-        <div class="paid_from">
-        <p><br/> ${medlem/fornavn|None} ${medlem/etternavn|None}<br/>
-        ${medlem/adresse|None}<br/>${medlem/postnr|None} ${medlem/poststed|None}</p>
-      </div>
       <div class="betalingsfrist">
          ${view/betalingsfrist}
       </div>
 
-      <div class="paid_to">
+      <div class="paid">
+        <div class="paid_from">
+          <p><br/> ${medlem/fornavn|None} ${medlem/etternavn|None}<br/>
+          ${medlem/adresse|None}<br/>${medlem/postnr|None} ${medlem/poststed|None}</p>
+        </div>
+
+
+        <div class="paid_to">
          <p tal:replace="structure paid_to" />
       </div>
     </div>

@@ -36,6 +36,7 @@ class IInvoiceSettings(form.Schema):
         fields=[
              'paid_to',
              'sum',
+             'betalingsfrist',
              'bodytext',
              'kontonr'
         ],
@@ -49,7 +50,7 @@ class IInvoiceSettings(form.Schema):
     	title=_(u"Sum", default=u"Sum"),
     )
 
-    betalingsfrist = schema.Text (
+    betalingsfrist = schema.TextLine (
     	title=_(u"due_date", default=u"Betalingsfrist."),
         default=_(u"14 dager"),
     )
@@ -57,7 +58,7 @@ class IInvoiceSettings(form.Schema):
     	title=_(u"Bodytext", default=u"Bodytext"),
     )
 
-    kontonr = schema.Text (
+    kontonr = schema.TextLine (
     	title=_(u"Account nr.", default=u"Kontonr."),
     )
 

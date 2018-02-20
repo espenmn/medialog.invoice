@@ -35,12 +35,16 @@ class InvoiceView(BrowserView):
         return  api.portal.get_registry_record('bodytext', interface=IInvoiceSettings)
 
     @property
-    def group_users(self):
+    def betalingsfrist(self):
+        return  api.portal.get_registry_record('betalingsfrist', interface=IInvoiceSettings)
+
+    @property
+    def get_users(self):
         usergroup = api.user.get_users()
         userlist = []
 
         for member in usergroup:
-            summ = self.sum()
+            summ = self.sum
             if member.getProperty('utenbys'):
                 summ = summ/2
             userlist.append(
