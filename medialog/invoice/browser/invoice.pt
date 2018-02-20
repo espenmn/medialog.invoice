@@ -29,7 +29,7 @@
 
       <div class="paid">
         <div class="paid_from">
-        <p>${medlem/id|None}<br/> ${medlem/fornavn|None} ${medlem/etternavn|None}<br/>
+        <p><br/> ${medlem/fornavn|None} ${medlem/etternavn|None}<br/>
         ${medlem/adresse|None}<br/>${medlem/postnr|None} ${medlem/poststed|None}</p>
       </div>
 
