@@ -44,20 +44,22 @@ class InvoiceView(BrowserView):
         userlist = []
 
         for member in usergroup:
-            summ = self.sum
-            if member.getProperty('utenbys'):
-                summ = summ/2
-            userlist.append(
-                { 'id': member.getProperty('id'),
-                  'etternavn': member.getProperty('etternavn'),
-                  'fornavn': member.getProperty('fornavn'),
-                  'postnr': member.getProperty('postnr'),
-                  'poststed': member.getProperty('poststed'),
-                  'honnor': member.getProperty('honn_rmedlem'),
-                  'adresse': member.getProperty('adresse'),
-                  'utenbys': member.getProperty('utenbys'),
-                  'sum': summ,
-                  })
+            if not member.getProperty('fritatt_kontingent'):
+                summ = self.sum
+                if member.getProperty('utenbys'):
+                    summ = summ/2
+
+                userlist.append(
+                    { 'id': member.getProperty('id'),
+                      'etternavn': member.getProperty('etternavn'),
+                      'fornavn': member.getProperty('fornavn'),
+                      'postnr': member.getProperty('postnr'),
+                      'poststed': member.getProperty('poststed'),
+                      'honnor': member.getProperty('honn_rmedlem'),
+                      'adresse': member.getProperty('adresse'),
+                      'utenbys': member.getProperty('utenbys'),
+                      'sum': summ,
+                     })
 
         return userlist
 
