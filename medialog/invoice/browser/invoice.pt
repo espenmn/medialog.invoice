@@ -7,7 +7,7 @@
       i18n:domain="plone">
   <body tal:define="bodytext view/bodytext; paid_to view/paid_to; kontonr view/kontonr">
     <tal:repeat tal:repeat="medlem view/get_users">
-    <div class="page-break">
+    <div class="page-break" tal:condition="not:medlem/fritatt_kontingent">
 
       <div class="logo"><img src="http://dgh.medialog.no/om-dgh/medlemsliste/++theme++dghtheme/logo.png" class="logoimage">
         <h1>Selskabet Den gode Hensigt</h1>
