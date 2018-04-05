@@ -59,6 +59,7 @@ class InvoiceView(BrowserView):
                       'adresse': member.getProperty('adresse'),
                       'utenbys': member.getProperty('utenbys'),
                       'sum': summ,
+                      'fritatt_kontingent': member.getProperty('fritatt_kontingent'),
                      })
 
         return userlist
